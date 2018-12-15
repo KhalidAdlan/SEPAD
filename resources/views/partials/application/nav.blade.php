@@ -25,11 +25,13 @@
                           </a>
                       </div>
                       <div class="navbar-dropdown">
+                        @if(isset($categories))
                           @foreach ($categories as $child)
                               <a class="navbar-item {{ active($child) }} " href="{{ $child->link }}">
                                   {{ $child->title }}
                               </a>
                           @endforeach
+                         @endif
                       </div>
 
                   </div>
