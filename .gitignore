@@ -1,7 +1,7 @@
 .idea
 .env
 .phpstorm.meta.php
-_ide_helper.php
+
 node_modules
 npm-debug.log
 vendor
