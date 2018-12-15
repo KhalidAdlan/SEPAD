@@ -134,17 +134,17 @@ if (!function_exists('getMenu')) {
     }
 }
 
-if (!function_exists('getFooterArticles')) {
+if (!function_exists('getFooterBooks')) {
     /**
      * @param int $limit
      *
      * @return mixed
      * @throws \Exception
      */
-    function getFooterArticles($limit = 3)
+    function getFooterBooks($limit = 3)
     {
-        return cache()->remember('footer_articles', 60, function () use ($limit) {
-            return \App\Models\Article::published()->limit($limit)->get();
+        return cache()->remember('footer_books', 60, function () use ($limit) {
+            return \App\Models\Book::published()->limit($limit)->get();
         });
     }
 }

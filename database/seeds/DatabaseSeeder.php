@@ -31,8 +31,8 @@ class DatabaseSeeder extends Seeder
     {
         \DB::table('categories')->delete();
         factory(\App\Models\Category::class, 5)->create();
-        \DB::table('articles')->delete();
-        factory(\App\Models\Article::class, 40)->create();
+        //\DB::table('books')->delete();
+      //  factory(\App\Models\Book::class, 40)->create();
         \DB::table('pages')->delete();
         factory(\App\Models\Page::class, 6)->create(['parent_id' => null]);
         foreach (range(4, 5) as $p) {

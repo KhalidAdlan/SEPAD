@@ -36,13 +36,17 @@ $factory->define(\App\Models\Page::class, function (Faker $faker, $attributes) {
         'title' => title_case($faker->words(2, true))
     ];
 });
-
-$factory->define(\App\Models\Article::class, function (Faker $faker) {
+/*
+$factory->define(\App\Models\Book::class, function (Faker $faker) {
     return [
         'category_id' => $faker->numberBetween(1, 5),
-        'content' => implode('<br/><br/>', $faker->paragraphs(8)),
+
         'description' => $faker->sentence(5),
+        'author' => $faker->name(),
+        'file_path'=> 'filepath',
         'published_at' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'title' => title_case($faker->words(4, true))
     ];
+
 });
+  */

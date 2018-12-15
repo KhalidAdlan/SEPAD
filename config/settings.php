@@ -2,10 +2,10 @@
 
 return [
     'analytics_id'     => null,
-    'logo'             => 'i/icons/android-chrome-192x192.png',
+    'logo'             => asset('/img/logo.jpg'),
     'login_image'      => 'https://ssl.gstatic.com/accounts/ui/avatar_2x.png',
     'site_facebook'    => 'https://www.facebook.com/',
-    'site_description' => 'Laravel 5 Simple CMS example application description.',
-    'site_title'       => 'Laravel 5 Simple CMS',
+    'site_description' => 'SEPAD | SUDAN ELECTRONIC PAD',
+    'site_title'       => 'SEPAD',
     'site_twitter'     => 'https://twitter.com/',
 ];

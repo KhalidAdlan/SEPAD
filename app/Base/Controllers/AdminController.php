@@ -74,6 +74,22 @@ abstract class AdminController extends Controller
         $this->resetCache();
         return $this->redirectRoutePath($path);
     }
+    public function createBookFlashRedirect($class, Request $request, $imageColumn = false, $path = 'index')
+    {
+        $filepath = $request->file('file_path')->store($request->title);
+        $this->validate($request, $this->validation);
+        $model = $class::create([
+          'author' => $request->author,
+          'category_id' => $request->category_id,
+          'file_path' => $filepath,
+          'description' => $request->description,
+          'published_at' => $request->published_at,
+          'title' => $request->title
+        ]);
+        $this->flash('create', $model->id ? 'success' : 'error');
+        $this->resetCache();
+        return $this->redirectRoutePath($path);
+    }
 
     /**
      * Save, flash success or error then redirect

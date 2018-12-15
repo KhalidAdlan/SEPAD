@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Application;
 
 use App\Base\Services\SitemapService;
 use App\Http\Controllers\Controller;
-use App\Models\Article;
+use App\Models\Book;
 use App\Models\Category;
 use App\Models\Page;
 
@@ -15,11 +15,19 @@ class PageController extends Controller
      */
     public function getIndex()
     {
-        return view('application.articles', [
+        return view('application.books', [
             'title' => getTitle(),
             'description' => getDescription(),
-            'articles' => Article::published()->paginate(4)
+            'books' => Book::published()->paginate(4),
+            'categories' => $this->getCategories()
         ]);
+    }
+
+
+    public function getCategories()
+    {
+      return Category::all();
+
     }
 
     /**
@@ -29,10 +37,11 @@ class PageController extends Controller
      */
     public function getCategory(Category $category)
     {
-        return view('application.articles', [
+        return view('application.books', [
             'title' => $category->title,
             'description' => $category->description,
-            'articles' => Article::where('category_id', $category->id)->paginate(4)
+            'books' => book::where('category_id', $category->id)->paginate(4),
+            'categories' => $this->getCategories() ,
         ]);
     }
 
@@ -43,17 +52,17 @@ class PageController extends Controller
      */
     public function getPage(Page $page)
     {
-        return view('application.content', ['object' => $page]);
+        return view('application.content', ['object' => $page, 'categories' => $this->getCategories()]);
     }
 
     /**
-     * @param \App\Models\Article $article
+     * @param \App\Models\book $book
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function getArticle(Article $article)
+    public function getbook(book $book)
     {
-        return view('application.content', ['object' => $article]);
+        return view('application.content', ['object' => $book]);
     }
 
     /**

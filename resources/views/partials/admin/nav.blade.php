@@ -14,7 +14,7 @@
         <div class="navbar-menu">
             <div class="navbar-start">
                 @include('partials.admin.nav.single', ['link' => route('admin.dashboard.index'), 'text' => __('admin.dashboard.index'), 'icon' => 'stats'])
-                @include('partials.admin.nav.dropdown', ['resource' => 'article', 'icon' => 'document'])
+                @include('partials.admin.nav.dropdown', ['resource' => 'book', 'icon' => 'document'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'category', 'icon' => 'filing'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'page', 'icon' => 'film'])
                 @include('partials.admin.nav.dropdown', ['resource' => 'user', 'icon' => 'contact'])

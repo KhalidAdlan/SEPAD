@@ -1,3 +1,4 @@
+
 const Turbolinks = require('turbolinks');
 
 document.addEventListener('turbolinks:load', function() {

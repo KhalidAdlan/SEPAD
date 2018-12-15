@@ -1,0 +1,10 @@
+Date: Thu, 10 May 2018
+
+-Issue: 
+
+When trying to pay a donation at https://singlebody.sd/categories/18/cases/7 the payment form does not work as excpected and some resources  are not loaded correctly.
+
+-Solution: 
+
+https://singlebody.sd/categories/18/cases/7 redirects the user to the url [https://syberpay.test.sybertechnology.com/syberpay//payment/b220c15d-c321-4290-ae3f-b2dba83de659]
+with an extra slash '/' after the end of [https://syberpay.test.sybertechnology.com/syberpay] and removing that slash resolves the issue.

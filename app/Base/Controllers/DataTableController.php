@@ -56,13 +56,13 @@ abstract class DataTableController extends DataTable
 
     /**
      * Properties of the relationships that are loaded via eager loading
-     * For instance let Article has a Category and we want to show the Category title within the Article Datatable
-     * You can load the article that belongs to category within query function like:
+     * For instance let Book has a Category and we want to show the Category title within the Book Datatable
+     * You can load the Book that belongs to category within query function like:
      *
      * public function query()
      * {
-     *      $articles = Article::with('category');
-     *      return $this->applyScopes($articles);
+     *      $Books = Book::with('category');
+     *      return $this->applyScopes($Books);
      * }
      *
      * $eager_columns = ['category' => 'title'];
@@ -71,11 +71,11 @@ abstract class DataTableController extends DataTable
      *
      * public function query()
      * {
-     *      $comments = Comment::with('category', 'article');
-     *      return $this->applyScopes($articles);
+     *      $comments = Comment::with('category', 'Book');
+     *      return $this->applyScopes($Books);
      * }
      *
-     * $eager_columns = ['category' => 'title', 'article' => 'title'];
+     * $eager_columns = ['category' => 'title', 'Book' => 'title'];
      *
      * @var array
      */

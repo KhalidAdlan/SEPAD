@@ -4,7 +4,7 @@
             <input class="file-input" type="file" name="{{ $attribute }}">
             <div class="file-cta">
                 <div class="file-icon">{!! icon('cloud-upload') !!}</div>
-                <div class="file-label">{{ __('admin.fields.' . $attribute) }}</div>
+                <div class="file-label">Select File:</div>
             </div>
             <div class="file-name is-hidden"></div>
         </label>

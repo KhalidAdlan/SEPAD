@@ -1,9 +1,10 @@
-<nav class="navbar is-light">
+<nav class="navbar is-dark">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('root') }}">
-                <img src="{{ asset(config('settings.logo')) }}" alt="{{ config('settings.site_title') }}">
+                <img class="rounded" src="{{ asset('/img/logo.png') }}" width="40"  alt="{{ config('settings.site_title') }}">
             </a>
+            <p class="brand">SEPAD | SUDAN ELECTRONIC PAD</p>
             <div id="toggle-menu" class="navbar-burger burger">
                 <span></span>
                 <span></span>
@@ -12,28 +13,42 @@
         </div>
         <div id="menu" class="navbar-menu">
             <div class="navbar-start">
-                @foreach (getMenu() as $p)
-                    @if ($p->children->count() > 0)
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <div class="navbar-link">
-                                <a class="navbar-item {{ active($p) }}" href="{{ $p->link }}">
-                                    {{ $p->title }}
-                                </a>
-                            </div>
-                            <div class="navbar-dropdown">
-                                @foreach ($p->children as $child)
-                                    <a class="navbar-item {{ active($child) }}" href="{{ $child->link }}">
-                                        {{ $child->title }}
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
-                    @else
-                        <a class="navbar-item" href="{{ $p->link }}">
-                            {{ $p->title }}
-                        </a>
-                    @endif
-                @endforeach
+
+                  <a class="navbar-item" href="">
+                            Books
+                  </a>
+
+                  <div class="navbar-item has-dropdown is-hoverable">
+                      <div class="navbar-link ">
+                          <a class="navbar-item navdrop" href="">
+                              Categories
+                          </a>
+                      </div>
+                      <div class="navbar-dropdown">
+                          @foreach ($categories as $child)
+                              <a class="navbar-item {{ active($child) }} " href="{{ $child->link }}">
+                                  {{ $child->title }}
+                              </a>
+                          @endforeach
+                      </div>
+
+                  </div>
+                  <a class="navbar-item" href="">
+                            About Us
+                  </a>
+                  <a class="navbar-item" href="">
+                            Contact Us
+                  </a>
+                  <div class="field navbar-item">
+  <p class="control has-icons-left  ">
+    <input class="input" type="text" placeholder="Search books...">
+    <span class="icon is-small is-left">
+      <i class="fas fa-search"></i>
+    </span>
+  </p>
+</div>
+
+
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">

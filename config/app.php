@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel 5 Simple CMS'),
+    'name' => env('APP_NAME', 'SEPAD'),
 
     /*
     |--------------------------------------------------------------------------
@@ -145,6 +145,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Crowles\FileBrowser\FileBrowserServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -31,8 +31,13 @@
     <meta name="msapplication-TileColor" content="#336699">
     <meta name="msapplication-config" content="{{ asset('i/icons/browserconfig.xml') }}">
     <meta name="theme-color" content="#336699">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     <link rel="stylesheet" type="text/css" href="{{ asset(mix('dist/css/application.css')) }}">
-    @hasSection('canonical')<link rel="canonical" href="@yield('canonical')">@endif
+      @hasSection('canonical')<link rel="canonical" href="@yield('canonical')">@endif
     <script src="{{ asset(mix('dist/js/application.js')) }}"></script>
     @if (config('settings.analytics_id') !== null)
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('settings.analytics_id') }}"></script>

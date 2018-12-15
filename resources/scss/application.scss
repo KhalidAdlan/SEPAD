@@ -1,7 +1,9 @@
 @import "application/_variables";
 @import "../../node_modules/bulma/bulma";
+
 @import "application/_overrides";
 @import "application/utilities";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 
 iframe {
   border: 0;
@@ -12,4 +14,35 @@ iframe {
   background: $primary;
   background: -webkit-linear-gradient(to right, $primary, darken($primary, 5%));
   background: linear-gradient(to right, $primary, darken($primary, 5%));
+}
+.brand{
+padding-top: 5px;
+
+}
+
+a.navbar-item.navdrop{
+color:white
+
+}
+
+a.navbar-item.navdrop:hover{
+background-color:transparent;
+color:white;
+}
+
+.header{
+font-size:70px;
+padding-bottom: 500px
+}
+
+.subheader{
+font-size:50px;
+
+}
+
+.header{
+color:white;
+-webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: black;
+
 }

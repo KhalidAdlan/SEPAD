@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Article;
+use App\Models\Book;
 use App\Models\Category;
 use App\Models\Page;
 use App\Models\User;
@@ -55,7 +55,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     private function bootRouteModelBinders()
     {
-        Route::model('article', Article::class);
+        Route::model('book', Book::class);
         Route::model('category', Category::class);
         Route::model('page', Page::class);
         Route::model('user', User::class);
@@ -71,10 +71,10 @@ class RouteServiceProvider extends ServiceProvider
     private function bootRouteParameterBinders()
     {
         Route::bind('aSlug', function ($slug) {
-            return Article::with('category')->where('slug', $slug)->firstOrFail();
+            return Book::with('category')->where('slug', $slug)->firstOrFail();
         });
         Route::bind('cSlug', function ($slug) {
-            return Category::with('articles')->where('slug', $slug)->firstOrFail();
+            return Category::with('books')->where('slug', $slug)->firstOrFail();
         });
         Route::bind('pSlug', function ($slug) {
             return Page::with('parent')->where('slug', $slug)->firstOrFail();
