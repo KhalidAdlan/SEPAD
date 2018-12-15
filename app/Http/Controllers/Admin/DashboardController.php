@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Base\Controllers\AdminController;
-use Analytics;
+
 use App\Base\Services\AlexaService;
 use Carbon\Carbon;
-use Spatie\Analytics\Period;
+
 
 class DashboardController extends AdminController
 {
@@ -29,10 +29,10 @@ class DashboardController extends AdminController
      */
     public function __construct()
     {
-        parent::__construct();
+      //  parent::__construct();
         $end = Carbon::now();
-        $this->limit = 20;
-        $this->period = Period::create($end->copy()->startOfDay()->subDays(30), $end);
+        //$this->limit = 20;
+        //$this->period = Period::create($end->copy()->startOfDay()->subDays(30), $end);
     }
 
     /**
@@ -41,12 +41,6 @@ class DashboardController extends AdminController
      */
     public function getIndex()
     {
-        if (strpos(env('GOOGLE_ANALYTICS_CREDENTIAL_PATH'), '*') === false) {
-            return view('admin.dashboard', [
-                'statistics' => $this->getStatistics(),
-                'today' => $this->getToday()
-            ]);
-        }
         $this->flashRaw(__('admin.invalid'));
         return redirect(route('admin.user.index'));
     }
@@ -59,7 +53,7 @@ class DashboardController extends AdminController
      */
     protected function query($options = [], $metrics = 'ga:visits')
     {
-        return Analytics::performQuery($this->period, $metrics, $options)->rows;
+
     }
 
     /**
