@@ -28,6 +28,6 @@
     "flatpickr": "^4.5.2",
     "font-awesome": "^4.7.0",
     "trumbowyg": "^2.11.0",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0" 
   }
 }
