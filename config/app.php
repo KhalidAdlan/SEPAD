@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -148,7 +148,7 @@ return [
         Crowles\FileBrowser\FileBrowserServiceProvider::class,
         Barryvdh\Elfinder\ElfinderServiceProvider::class,
        Barryvdh\Snappy\ServiceProvider::class,
-      
+
 
         /*
          * Application Service Providers...
