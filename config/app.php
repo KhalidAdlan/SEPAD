@@ -146,6 +146,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Crowles\FileBrowser\FileBrowserServiceProvider::class,
+        Barryvdh\Elfinder\ElfinderServiceProvider::class,
+       Barryvdh\Snappy\ServiceProvider::class,
+      
 
         /*
          * Application Service Providers...
@@ -223,13 +226,16 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+
         /*
          * Custom Third Party Aliases...
          */
         'Analytics'   => Spatie\Analytics\AnalyticsFacade::class,
         'Datatables'  => Yajra\DataTables\Facades\DataTables::class,
         'Flash'       => Laracasts\Flash\Flash::class,
-    
+        'PDF'         => Barryvdh\Snappy\Facades\SnappyPdf::class,
+       'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+
     ],
 
 ];
