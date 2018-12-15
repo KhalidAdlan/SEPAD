@@ -1,4 +1,5 @@
 <?php
+$DATABASE_URL=parse_url('postgres://clbkunqsigylil:d536263e2f409f4d821a9ae6de26ddc0871c2729a674afe6ef359fc901629562@ec2-23-21-188-236.compute-1.amazonaws.com:5432/d17rkrueh214jk');
 
 return [
 
@@ -12,7 +13,6 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-     $DATABASE_URL=parse_url('postgres://clbkunqsigylil:d536263e2f409f4d821a9ae6de26ddc0871c2729a674afe6ef359fc901629562@ec2-23-21-188-236.compute-1.amazonaws.com:5432/d17rkrueh214jk');
 
 
     'default' => env('DB_CONNECTION', 'pgsql'),
