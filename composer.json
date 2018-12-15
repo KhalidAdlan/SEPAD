@@ -23,8 +23,7 @@
 		"yajra/laravel-datatables-oracle": "~8.0"
 	},
 	"require-dev": {
-		"barryvdh/laravel-debugbar": "~3.2",
-		"barryvdh/laravel-ide-helper": "~2.5",
+	
 		"beyondcode/laravel-dump-server": "^1.2",
 		"doctrine/dbal": "~2.8",
 		"filp/whoops": "~2.2",

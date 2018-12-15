@@ -165,8 +165,7 @@ return [
         /*
          * Third Party Stuff
          */
-        Barryvdh\Elfinder\ElfinderServiceProvider::class,
-        Barryvdh\Snappy\ServiceProvider::class,
+
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
@@ -230,8 +229,7 @@ return [
         'Analytics'   => Spatie\Analytics\AnalyticsFacade::class,
         'Datatables'  => Yajra\DataTables\Facades\DataTables::class,
         'Flash'       => Laracasts\Flash\Flash::class,
-        'PDF'         => Barryvdh\Snappy\Facades\SnappyPdf::class,
-        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class
+    
     ],
 
 ];
