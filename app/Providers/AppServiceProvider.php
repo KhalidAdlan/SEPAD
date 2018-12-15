@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
-use Illuminate\Routing\UrlGenerator;
+
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
@@ -11,12 +11,11 @@ use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function boot(UrlGenerator $url)
+    public function boot()
     {
         Paginator::defaultView('pagination::bulma');
         Paginator::defaultSimpleView('pagination::simple-bulma');
         Schema::defaultStringLength(191);
-        $url->forceSchema('https');
     }
 
     /**
