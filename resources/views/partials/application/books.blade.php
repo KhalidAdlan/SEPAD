@@ -1,5 +1,5 @@
 <div class="columns is-multiline">
-  
+  @if(isset($books))
     @foreach ($books as $book)
         <div class="column is-12">
             <div class="columns is-vcentered">
@@ -27,6 +27,7 @@
             </div>
         </div>
     @endforeach
+  @endif
     @if ($books->total() > $books->count())
         <div class="column is-12">
             {!! $books->appends(request()->except('page'))->links() !!}
