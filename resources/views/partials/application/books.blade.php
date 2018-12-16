@@ -13,8 +13,8 @@
             <div class="level"></div>
             <div class="content">
                 <p>{{ getNWords($book->description, 50) }}</p>
-                <p>Download: {{secure_asset($book->file_path)}} </p>
-                <a href="{{ Storage::url($book->file_path) }}" download>{{$book->title }}</a>
+
+                <a href="{{secure_asset($book->file_path)}}" download>Download</a>
             </div>
 
             <div class="columns is-vcentered">
