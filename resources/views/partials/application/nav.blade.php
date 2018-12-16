@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('root') }}">
-                <img class="rounded" src="{{ secure_asset('/img/logo.png') }}" width="40"  alt="{{ config('settings.site_title') }}">
+                <img class="rounded" src="{{ asset('/img/logo.png') }}" width="40"  alt="{{ config('settings.site_title') }}">
             </a>
             <p class="brand">SEPAD | SUDAN ELECTRONIC PAD</p>
             <div id="toggle-menu" class="navbar-burger burger">
