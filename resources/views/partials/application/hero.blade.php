@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{asset('/img/1.jpg')}}" alt="First slide">
+      <img class="d-block w-100" src="{{secure_asset('/img/1.jpg')}}" alt="First slide">
       <div class="carousel-caption d-none d-md-block header">
 
     <h1 class="" >Welcome to SEPAD</h1>
@@ -16,7 +16,7 @@
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('/img/2.jpg')}}" alt="Second slide">
+      <img class="d-block w-100" src="{{secure_asset('/img/2.jpg')}}" alt="Second slide">
       <div class="carousel-caption d-none d-md-block header">
 
     <h1 class="">Our Mission</h1>
@@ -24,7 +24,7 @@
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('/img/3.jpg')}}" alt="Third slide">
+      <img class="d-block w-100" src="{{secure_asset('/img/3.jpg')}}" alt="Third slide">
       <div class="carousel-caption d-none d-md-block header">
 
 
@@ -32,10 +32,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('/img/4.jpg')}}" alt="Fourth slide">
+      <img class="d-block w-100" src="{{secure_asset('/img/4.jpg')}}" alt="Fourth slide">
       <div class="carousel-caption d-none d-md-block header">
 
-  
+
     <p class="subheader">SEPAD provides an opportunity for creative writers to create and publish their literary works in the library
 And offered for sale to the public in return for percentages agreed upon between the library for production and publishing and for the writer
 with material and literary right</p>

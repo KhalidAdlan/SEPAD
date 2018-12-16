@@ -10,7 +10,7 @@ const trumbowyg = require('trumbowyg'),
 require('datatables.net');
 require('datatables.net-buttons');
 require('datatables-bulma');
-require('../../vendor/yajra/laravel-datatables-buttons/src/resources/assets/buttons.server-side.js');
+require('../../vendor/yajra/laravel-datatables-buttons/src/resources/secure_assets/buttons.server-side.js');
 
 $(function() {
   $(".datepicker").flatpickr();

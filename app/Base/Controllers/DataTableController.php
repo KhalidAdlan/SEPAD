@@ -316,7 +316,7 @@ abstract class DataTableController extends DataTable
      */
     protected function wrapImage($model, $image_column): string
     {
-        $url = asset($model->$image_column);
+        $url = secure_asset($model->$image_column);
         return "<a target='_blank' href='{$url}'><img style='max-height:50px' src='{$url}'/></a>";
     }
 
