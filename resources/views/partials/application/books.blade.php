@@ -14,7 +14,7 @@
             <div class="content">
                 <p>{{ getNWords($book->description, 50) }}</p>
 
-                <a href="{{secure_asset($book->file_path)}}" download>Download</a>
+                <a href="{{asset($book->file_path)}}" download>Download</a>
             </div>
 
             <div class="columns is-vcentered">

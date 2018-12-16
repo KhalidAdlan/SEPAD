@@ -10,10 +10,10 @@ return [
 
     'footer' => [
         'about'  => 'About Us',
-        'latest' => 'Latest Articles',
+        'latest' => 'Latest Books',
         'follow' => 'Follow Us',
-        'text'   => 'This is just a simple Laravel CMS with a simple UI to help you make things faster and concentrate on your project\'s logic instead of recreating the boilerplate everytime.',
-        'url'    => 'https://github.com/ozdemirburak/laravel-5-simple-cms'
+        'text'   => 'SEPAD | SUDAN ELECTRONIC PAD is an online library that provide a diverse collection of books and online magazines',
+        'url'    => ''
     ],
     'home'          => 'Home',
     'pagination' => [

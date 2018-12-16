@@ -36,7 +36,7 @@ $factory->define(\App\Models\Page::class, function (Faker $faker, $attributes) {
         'title' => title_case($faker->words(2, true))
     ];
 });
-/*
+
 $factory->define(\App\Models\Book::class, function (Faker $faker) {
     return [
         'category_id' => $faker->numberBetween(1, 5),
@@ -49,4 +49,3 @@ $factory->define(\App\Models\Book::class, function (Faker $faker) {
     ];
 
 });
-  */

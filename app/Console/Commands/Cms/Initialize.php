@@ -75,14 +75,14 @@ class Initialize extends Command
     }
 
     /**
-     * Run npm update or install then generate secure_assets
+     * Run npm update or install then generate assets
      */
     private function npm(): void
     {
         $command = is_dir(base_path('node_modules')) ? 'update' : 'install';
         $this->info('Running npm ' . $command);
         $this->runProcess(['npm', $command]);
-        $this->info('Creating secure_assets');
+        $this->info('Creating assets');
         $this->runProcess(['npm', 'run', 'production']);
     }
 

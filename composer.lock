@@ -2385,7 +2385,7 @@
                 "phpunit/phpunit": "^4.0|^5.0"
             },
             "suggest": {
-                "kriswallsmith/secure_assetic": "The best way to manage secure_assets",
+                "kriswallsmith/assetic": "The best way to manage assets",
                 "monolog/monolog": "Log using Monolog",
                 "predis/predis": "Redis storage"
             },

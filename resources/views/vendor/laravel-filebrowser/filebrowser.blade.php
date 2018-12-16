@@ -13,7 +13,7 @@
           rel="stylesheet"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
-    <link href="{{ secure_asset($path.'/css/filebrowser.css') }}" rel="stylesheet">
+    <link href="{{ asset($path.'/css/filebrowser.css') }}" rel="stylesheet">
 </head>
 
 <body id="">
@@ -48,6 +48,6 @@
 </div>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>jQ = jQuery.noConflict(true);</script>
-<script src="{{ secure_asset($path.'/js/filebrowser.js') }}"></script>
+<script src="{{ asset($path.'/js/filebrowser.js') }}"></script>
 </body>
 </html>

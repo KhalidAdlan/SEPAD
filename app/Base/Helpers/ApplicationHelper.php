@@ -47,9 +47,9 @@ if (!function_exists('getImage')) {
     function getImage($object = null, $property = 'logo')
     {
         if (is_object($object) && isset($object->$property)) {
-            return secure_asset($object->$property);
+            return asset($object->$property);
         }
-        return is_string($object) ? $object : secure_asset('i/icons/android-chrome-512x512.png');
+        return is_string($object) ? $object : asset('i/icons/android-chrome-512x512.png');
     }
 }
 

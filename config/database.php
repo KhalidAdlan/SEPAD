@@ -1,5 +1,5 @@
 <?php
-$DATABASE_URL=parse_url('postgres://clbkunqsigylil:d536263e2f409f4d821a9ae6de26ddc0871c2729a674afe6ef359fc901629562@ec2-23-21-188-236.compute-1.amazonaws.com:5432/d17rkrueh214jk');
+//$DATABASE_URL=parse_url('postgres://clbkunqsigylil:d536263e2f409f4d821a9ae6de26ddc0871c2729a674afe6ef359fc901629562@ec2-23-21-188-236.compute-1.amazonaws.com:5432/d17rkrueh214jk');
 
 return [
 
@@ -58,11 +58,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL['host'],
-           'port' => $DATABASE_URL['port'],
-           'database' => ltrim($DATABASE_URL["path"], "/"),
-           'username' => $DATABASE_URL["user"],
-           'password' => $DATABASE_URL["pass"],
+            'host' => '127.0.0.1',
+           'port' => '5432',
+           'database' => 'dms',
+           'username' => 'postgres',
+           'password' => 'fisherman79',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
