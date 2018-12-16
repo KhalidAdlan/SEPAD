@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->addUsers();
-        $this->addContent();
+    //    $this->addContent();
     }
 
     /**
